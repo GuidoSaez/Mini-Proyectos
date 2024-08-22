@@ -1,3 +1,98 @@
 :root {
   --fuente: "VT323", monospace;
 }
+
+/* Estilos generales */
+
+body {
+  height: 100vh;
+  padding: 1rem;
+
+  font-family: var(--fuente);
+  color: #ddd;
+
+  background: linear-gradient(#0f9b0f,#000);
+}
+
+.button {
+  border-radius: 6px;
+
+  font-family: var(--fuente);
+
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+
+
+  cursor: pointer;
+  transition: box-shadow .3s ease;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Mobile 320px - 480px */
+
+main {
+  height: 90vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: .2rem;
+  text-align: center;
+}
+
+button {
+  padding: .5rem 2.2rem;
+
+  font-size: 1.5rem;
+}
+
+footer {
+  height: 8.3vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+}
+
+@media (481px <= width <= 767px) {
+  h1 {
+    font-size: 3.3rem;
+  }
+}
+
+@media (768px <= width <= 1024px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  button {
+    padding: 0.6rem 2.4rem;
+
+    font-size: 1.7rem;
+  }
+}
+
+@media (width >= 1025px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+
+  button {
+    padding: 0.6rem 2.5rem;
+
+    font-size: 1.8rem;
+  }
+}
